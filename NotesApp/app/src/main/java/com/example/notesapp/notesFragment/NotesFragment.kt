@@ -35,8 +35,8 @@ class NotesFragment: Fragment(), NotesListener {
     }
 
     override fun onClicked(note: NoteModel) {
-        navController.navigate(R.id.action_notesFragment_to_placeholder, Bundle().apply {
-            putString("noteModel", "note.toJson()")
+        navController.navigate(R.id.action_notesFragment_to_notesDetailFragment, Bundle().apply {
+            putString("noteModel", note.toJson())
         })
     }
 }

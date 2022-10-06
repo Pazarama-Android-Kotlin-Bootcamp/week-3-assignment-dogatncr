@@ -11,8 +11,16 @@
         android:label="fragment_notes"
         tools:layout="@layout/fragment_notes" >
         <action
-            android:id="@+id/action_notesFragment_to_placeholder"
-            app:destination="@id/placeholder" />
+            android:id="@+id/action_notesFragment_to_notesDetailFragment"
+            app:destination="@id/notesDetailFragment" />
     </fragment>
-    <fragment android:id="@+id/placeholder" />
+    <fragment
+        android:id="@+id/notesDetailFragment"
+        android:name="com.example.notesapp.noteDetailsFragment.NotesDetailFragment"
+        android:label="fragment_notes_detail"
+        tools:layout="@layout/fragment_notes_detail" >
+        <action
+            android:id="@+id/action_notesDetailFragment_to_notesFragment"
+            app:destination="@id/notesFragment" />
+    </fragment>
 </navigation>

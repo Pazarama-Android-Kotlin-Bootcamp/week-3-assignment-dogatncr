@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:backgroundTint="#F5F5DC"
     tools:context=".notesFragment.NotesFragment">
 
 
@@ -13,9 +14,8 @@
         android:layout_height="match_parent"
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+        android:scrollbars="vertical"
+        android:layout_margin="10dp"
         tools:itemCount="5"
         tools:listitem="@layout/notes_item" />
 
