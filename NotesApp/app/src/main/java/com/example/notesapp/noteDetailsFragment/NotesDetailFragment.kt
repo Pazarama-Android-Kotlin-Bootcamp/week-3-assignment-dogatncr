@@ -19,7 +19,7 @@ class NotesDetailFragment :Fragment() {
     private lateinit var arrowBackicon : ImageButton
     private lateinit var navController: NavController
 
-
+    /** Creating notes detail fragment **/
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -27,11 +27,15 @@ class NotesDetailFragment :Fragment() {
         return inflater.inflate(R.layout.fragment_notes_detail, container, false)
     }
 
+    /** Initialized navigation controller and called set up views **/
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         navController = findNavController()
         super.onViewCreated(view, savedInstanceState)
         setupViews(view)
     }
+
+    /** Setting up notes detail views **/
+
     private fun setupViews(view: View) {
         NoteDetailHeader = view.findViewById(R.id.NoteDetailHeader)
         NoteBody = view.findViewById(R.id.NoteBody)
@@ -48,6 +52,7 @@ class NotesDetailFragment :Fragment() {
 
             }
         }
+        /** Navigation (going back) for arrow back button **/
         arrowBackicon.setOnClickListener {
             navController.navigate(R.id.action_notesDetailFragment_to_notesFragment, Bundle().apply {
             })

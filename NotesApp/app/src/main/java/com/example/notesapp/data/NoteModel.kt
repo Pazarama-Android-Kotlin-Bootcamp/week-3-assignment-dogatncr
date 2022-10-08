@@ -12,6 +12,8 @@ import com.example.notesapp.R
  * Created by dogatncr on 4.10.2022
  */
 
+
+/** Data class for notes information with Json conversion feature **/
 @Parcelize
 data class NoteModel (
     val NoteId :String,
@@ -29,6 +31,8 @@ data class NoteModel (
         }
     }
 }
+
+/** Mock data which will be shown in RecyclerView**/
 
 val mockNotesData = mutableListOf<NoteModel>(
     NoteModel(
@@ -54,113 +58,18 @@ val mockNotesData = mutableListOf<NoteModel>(
         NoteBody= "jfbnffkhvbabkhdbdıfyyıjnlsvfbkdjvfkvbavbfşabjadbavojrvbufdskdefjhrgbndmklömnbvfrtyuıopoıuytresdfghuıopşlknbvcdres"
     ),
     NoteModel(
-        "1",
-        "Note1",
-        "1st note",
-        NoteDetailHeader= "Title1",
-        NoteBody= "jfbnfdjnls",
+        "4",
+        "Note4",
+        "4th note",
+        NoteDetailHeader= "Title4",
+        NoteBody= "jfbnfdjnlsloremipsumhfsyhvbjhdsajkwodıeurfgyhvcbjxnkmlasowıfeuhvbcjnxslakwıeufhvcbjnkxslawhfrvbcdnxksdjıfhugvhbcnxsmljdhfgvbcndmlskdejfıhvbcndmslöşlwdokjfıh",
     ),
     NoteModel(
-        "2",
-        "Note2",
-        "2nd note",
-        NoteDetailHeader= "Title2",
-        NoteBody= "jfbnfdıfyyıjnls",
-
+        "5",
+        "Note5",
+        "5th note",
+        NoteDetailHeader= "Title5",
+        NoteBody= "jfbnfdıfyyıjlgvknls",
         ),
-    NoteModel(
-        "3",
-        "Note3",
-        "3rd note",
-        NoteDetailHeader= "Title3",
-        NoteBody= "jfbnffkhvbabkhdbdıfyyıjnlsvfbkdjvfkvbavbfşabjadbavojrvbufdskdefjhrgbndmklömnbvfrtyuıopoıuytresdfghuıopşlknbvcdres"
-    ),
-    NoteModel(
-        "1",
-        "Note1",
-        "1st note",
-        NoteDetailHeader= "Title1",
-        NoteBody= "jfbnfdjnls",
-    ),
-    NoteModel(
-        "2",
-        "Note2",
-        "2nd note",
-        NoteDetailHeader= "Title2",
-        NoteBody= "jfbnfdıfyyıjnls",
 
-        ),
-    NoteModel(
-        "3",
-        "Note3",
-        "3rd note",
-        NoteDetailHeader= "Title3",
-        NoteBody= "jfbnffkhvbabkhdbdıfyyıjnlsvfbkdjvfkvbavbfşabjadbavojrvbufdskdefjhrgbndmklömnbvfrtyuıopoıuytresdfghuıopşlknbvcdres"
-    ),
-    NoteModel(
-        "1",
-        "Note1",
-        "1st note",
-        NoteDetailHeader= "Title1",
-        NoteBody= "jfbnfdjnls",
-    ),
-    NoteModel(
-        "2",
-        "Note2",
-        "2nd note",
-        NoteDetailHeader= "Title2",
-        NoteBody= "jfbnfdıfyyıjnls",
-
-        ),
-    NoteModel(
-        "3",
-        "Note3",
-        "3rd note",
-        NoteDetailHeader= "Title3",
-        NoteBody= "jfbnffkhvbabkhdbdıfyyıjnlsvfbkdjvfkvbavbfşabjadbavojrvbufdskdefjhrgbndmklömnbvfrtyuıopoıuytresdfghuıopşlknbvcdres"
-    ),
-    NoteModel(
-        "1",
-        "Note1",
-        "1st note",
-        NoteDetailHeader= "Title1",
-        NoteBody= "jfbnfdjnls",
-    ),
-    NoteModel(
-        "2",
-        "Note2",
-        "2nd note",
-        NoteDetailHeader= "Title2",
-        NoteBody= "jfbnfdıfyyıjnls",
-
-        ),
-    NoteModel(
-        "3",
-        "Note3",
-        "3rd note",
-        NoteDetailHeader= "Title3",
-        NoteBody= "jfbnffkhvbabkhdbdıfyyıjnlsvfbkdjvfkvbavbfşabjadbavojrvbufdskdefjhrgbndmklömnbvfrtyuıopoıuytresdfghuıopşlknbvcdres"
-    ),
-    NoteModel(
-        "1",
-        "Note1",
-        "1st note",
-        NoteDetailHeader= "Title1",
-        NoteBody= "jfbnfdjnls",
-    ),
-    NoteModel(
-        "2",
-        "Note2",
-        "2nd note",
-        NoteDetailHeader= "Title2",
-        NoteBody= "jfbnfdıfyyıjnls",
-
-        ),
-    NoteModel(
-        "3",
-        "Note3",
-        "3rd note",
-        NoteDetailHeader= "Title3",
-        NoteBody= "jfbnffkhvbabkhdbdıfyyıjnlsvfbkdjvfkvbavbfşabjadbavojrvbufdskdefjhrgbndmklömnbvfrtyuıopoıuytresdfghuıopşlknbvcdres"
-    ),
 )

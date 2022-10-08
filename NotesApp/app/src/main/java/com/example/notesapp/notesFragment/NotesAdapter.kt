@@ -13,7 +13,7 @@ class NotesAdapter (
     private val listener: NotesListener
 ) : RecyclerView.Adapter<NotesAdapter.NotesViewHolder>()  {
 
-
+    /** creating view holder **/
     override fun onCreateViewHolder(
         parent: ViewGroup,
         viewType: Int
@@ -22,7 +22,7 @@ class NotesAdapter (
             LayoutInflater.from(parent.context).inflate(R.layout.notes_item, parent, false)
         return NotesViewHolder(view)
     }
-
+    /** binding notes elements to the view holder **/
     override fun onBindViewHolder(holder: NotesAdapter.NotesViewHolder, position: Int) {
         holder.bind(notesList[position], listener)
     }
@@ -30,6 +30,7 @@ class NotesAdapter (
     override fun getItemCount(): Int {
         return notesList.size
     }
+    /** Notes view holder was defined with bind method **/
     class NotesViewHolder(view: View) : RecyclerView.ViewHolder(view) {
         private val noteId = view.findViewById<TextView>(R.id.NoteId)
         private val noteFooter = view.findViewById<TextView>(R.id.NoteFooter)
@@ -47,6 +48,7 @@ class NotesAdapter (
         }
     }
 }
+/** for noticing and creating reactions when clicked on note **/
 interface NotesListener {
     fun onClicked(note: NoteModel)
 }

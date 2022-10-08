@@ -16,6 +16,7 @@ class NotesFragment: Fragment(), NotesListener {
     private lateinit var notesRecyclerView: RecyclerView
     private lateinit var navController: NavController
 
+    /** Creating notes views fragment **/
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -23,17 +24,19 @@ class NotesFragment: Fragment(), NotesListener {
         return inflater.inflate(R.layout.fragment_notes, container, false)
 
     }
+    /** Initialized navigation controller and called set up adapter **/
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         navController = findNavController()
         notesRecyclerView = view.findViewById(R.id.notesList)
         setupAdapter()
     }
+    /** Setting up adapter for notes recycler view **/
     private fun setupAdapter() {
         notesRecyclerView.adapter = NotesAdapter(mockNotesData, this)
 
     }
-
+    /** Defining onClick method for notes **/
     override fun onClicked(note: NoteModel) {
         navController.navigate(R.id.action_notesFragment_to_notesDetailFragment, Bundle().apply {
             putString("noteModel", note.toJson())
